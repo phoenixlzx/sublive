@@ -9,6 +9,10 @@ This is the API server on behalf of the beloved KNA subtitle team's idea.
 
 ## API
 
+* `filemd5` - File md5 hash for matching corresponding subtitle
+* `PlayResX` - Width of video file
+* `PlayResY` - Height of video file
+
 ### Fetch subtitle
 
 * Method: `GET`
@@ -21,6 +25,7 @@ Subtitle format: `Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Eff
 * Method: `POST`
 * Path: `/addsub/ssa`
 * data:
+  - `filemd5`
   - `layer`
   - `start` (in millisec format, e.g., '5560')
   - `end` (in millisec format, e.g., '6900')
