@@ -139,7 +139,16 @@ MongoClient.connect(config.mongodb, { db: { native_parser: true, w : 1 } }, func
                 if (err) {
                     return callback(err);
                 }
-                callback();
+
+                // add subtitle data to file
+                var content = 'Dialogue: ' + data.join(',') + '\n';
+
+                fs.appendFile(config.subtitle_path + filemd5 + '.ass', content, function (err) {
+                    if (err) {
+                        return callback(err);
+                    }
+                    callback();
+                });
             });
         });
     };
