@@ -1,7 +1,7 @@
 SubLive
 =======
 
-SubLive is a live ass subtitle API (live subtitles "彈幕" for local player).
+SubLive is a live ass subtitle API server (live subtitles "彈幕" for local player).
 
 This is the API server on behalf of the beloved KNA subtitle team's idea.
 
